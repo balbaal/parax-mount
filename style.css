@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  padding: 0 15px;
+  height: 100vh;
+}
+
+.parallax-content > img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.mountain {
+  top: 0px;
+}
+
+.forest {
+  top: 40%;
+}
