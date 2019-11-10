@@ -1,14 +1,52 @@
-* {
+body {
   margin: 0px;
   padding: 0px;
+  background-color: #191919;
 }
 
 .container {
   padding: 0 15px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.parallax-content > img {
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container > h1 {
+  margin-top: 2em;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.arrow {
+  width: 50%;
+  border-right: 1px solid white;
+  height: 50%;
+  margin-bottom: 4em;
+  height: 50%;
+  position: relative;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: white transparent transparent transparent;
+  right: -.7em;
+  bottom: -5px;
+}
+
+.mountain, .forest {
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -19,5 +57,9 @@
 }
 
 .forest {
-  top: 40%;
+  top: 18%;
+}
+
+.content {
+  color: white;
 }

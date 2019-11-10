@@ -10,19 +10,17 @@
 <body>  
   <div class="container">
     <div class="header">
-      <div>Parax Mount</div>
+      <h1>Parax Mount</h1>
       <img src="src/menu.svg" alt="menu">
     </div>
-    <h1>Explore The Jungle</h1>
-    <div class="arrow"></div>
+    <h1 class="lax" data-lax-translate-y="0 0, 400 -400">Explore The <br /> Jungle</h1>
+    <div class="arrow lax" data-lax-opacity="0 1, 100 0"></div>
   </div>
 
-  <div class="parallax-content">
-      <img src="src/mountains.png" class="mountain" alt="mountain">
-      <img src="src/forest.png" class="forest" alt="forest">
-  </div>
+  <img src="src/mountains.png" class="mountain lax" data-lax-translate-y="0 1, 400 -100" alt="mountain">
+  <img src="src/forest.png" class="forest lax" data-lax-translate-y="0 1, 300 -200" alt="forest">
 
-  <div class="container content">
+  <div class="container content lax" data-lax-translate-y="0 0, 400 -600" data-lax-opacity="0 0, 300 1">
     <h2>Main Title</h2>
     <h3>Sub Title</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas labore eos inventore! Asperiores corrupti maiores velit iste molestias veniam commodi, ut totam facere minima excepturi vel, fuga esse vitae quo.</p>
@@ -30,9 +28,18 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas labore eos inventore! Asperiores corrupti maiores velit iste molestias veniam commodi, ut totam facere minima excepturi vel, fuga esse vitae quo.</p>
   </div>
 
-  <script src=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
   <script>
-  
+      window.onload = function() {
+        lax.setup() // init
+
+        const updateLax = () => {
+          lax.update(window.scrollY)
+          window.requestAnimationFrame(updateLax)
+        }
+
+        window.requestAnimationFrame(updateLax)
+      }
   </script>
 </body>
 </html>
